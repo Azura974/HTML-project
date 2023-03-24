@@ -5,7 +5,7 @@ else{
     document.body.classList.add("light-mode")
 }
 
-themechanger = document.getElementsById("themechanger")
+themechanger = document.getElementById("themechanger")
 themechanger.addEventListener("click", ChangeTheme, {
     passive: true
 })
