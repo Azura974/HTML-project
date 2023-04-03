@@ -119,8 +119,8 @@ body {
 #thetheme {
     display: flex;
     justify-content: center;
-    position: sticky;
-    top: 1%
+position: sticky;
+top: 1%
 }
 
 .switch {
