@@ -107,7 +107,7 @@ body {
 
 
 #separator-main {
-    margin-top: 1vw;
+    margin-top: 15vw;
     padding: 0;
     background-image: linear-gradient(to right, var(--ishrath), var(--azura));
     height: 1vw;
@@ -119,8 +119,9 @@ body {
 #thetheme {
     display: flex;
     justify-content: center;
-position: sticky;
-top: 1%
+    position: sticky;
+    top: 1%;
+    z-index: 99;
 }
 
 .switch {
@@ -243,22 +244,63 @@ top: 1%
 }
 
 /* Carousel */
+#carousel {
+    position: relative;
+
+}
+
+#carousel nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--box-shadow) -75%, transparent, var(--box-shadow) 175%);
+    z-index: 10;
+}
+
 #carousel img {
-    width: auto;
+    width: 100%;
     height: 20em;
-    max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 #carousel ol {
     padding: 0;
+    height: 20em;
 }
 
 #carousel li {
     display: none;
     list-style-type: none;
+    transition: transform linear .5s;
 }
 
 #carousel .active {
     display: block;
+}
+
+#carousel .before-active {
+    display: block;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#carousel .after-active {
+    display: block;
+    transform: translateX(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }

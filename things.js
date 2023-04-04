@@ -30,22 +30,42 @@ let currentItem = 0
 prev.addEventListener("click", prevItem)
 next.addEventListener("click", nextItem)
 
+let interval
+
+function carouselAutoplay(){
+    interval = setInterval(nextItem,4000)
+}
+
+carouselAutoplay()
 
 function prevItem() {
+    clearInterval(interval)
+    carouselAutoplay()
     currentItem -= 1
     if (currentItem < 0) currentItem = carouselItems.length-1
-    setActiveItem()
+    setActiveItem(true)
 }
 
 function nextItem() {
+    clearInterval(interval)
+    carouselAutoplay()
     currentItem += 1
     if (currentItem > carouselItems.length-1) currentItem = 0
     setActiveItem()
 }
 
-function setActiveItem() {
+function setActiveItem(left = false) {
+
+    carouselItems[currentItem].classList.add(left ? "after-active" : "before-active")
     for (item of carouselItems) {
-        item.classList.remove("active")
+        item.classList.replace("active",left ? "before-active" : "after-active")
     }
-    carouselItems[currentItem].classList.add("active")
+    setTimeout(() => {
+        carouselItems[currentItem].classList.replace(left ? "after-active" : "before-active","active")
+    },5)
+    setTimeout(() => {
+        for (item of carouselItems) {
+            item.classList.remove(left ? "before-active" : "after-active")
+        }
+    },500)
 }
