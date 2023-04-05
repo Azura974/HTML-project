@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
 .light-mode {
     --fond: #fcf9f4ff;
     --containers: #f5f3eeff;
@@ -36,32 +38,35 @@
     }
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--fond);
     color: var(--texte);
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 
-.header {
+.header{
     /*column-gap: 10%;*/
     display: flex;
     flex-direction: row;
     text-align: center;
-    width: 100%;
+    width:100%;
     padding: 0;
     margin: 0;
     /*background-color: var(--containers);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);*/
-
+    
 }
-
-.main {
+.main{
     margin: 2em;
 }
 
 
-.profil1 {
+.profil1{
     width: 25%;
     display: flex;
     background-color: var(--containers);
@@ -216,13 +221,35 @@ body {
     padding: 0;
     width: 100%;
     border-radius: 50%;
+   
 }
+
 
 .description {
     padding: 0;
     width: 96%;
     height: 55%;
     background-color: var(--fond);
+}
+
+#bouton{
+    background-color: var(--containers);
+    width: 15vw;
+    height: 15vw;
+    border-radius: 30%;
+    float: right;
+    margin: 3%;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+}
+
+#bouton a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--texte);
 }
 
 
