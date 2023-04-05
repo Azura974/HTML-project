@@ -22,3 +22,52 @@ function ChangeTheme(){
         ClassList.add("light-mode")
     }
 }
+
+const carousel = document.getElementById("carousel")
+const prev = document.getElementById("prev")
+const next = document.getElementById("next")
+const carouselItems = carousel.querySelectorAll("ol li")
+let currentItem = 0
+
+prev.addEventListener("click", prevItem)
+next.addEventListener("click", nextItem)
+
+let interval
+
+function carouselAutoplay(){
+    interval = setInterval(nextItem,4000)
+}
+
+carouselAutoplay()
+
+function prevItem() {
+    clearInterval(interval)
+    carouselAutoplay()
+    currentItem -= 1
+    if (currentItem < 0) currentItem = carouselItems.length-1
+    setActiveItem(true)
+}
+
+function nextItem() {
+    clearInterval(interval)
+    carouselAutoplay()
+    currentItem += 1
+    if (currentItem > carouselItems.length-1) currentItem = 0
+    setActiveItem()
+}
+
+function setActiveItem(left = false) {
+
+    carouselItems[currentItem].classList.add(left ? "after-active" : "before-active")
+    for (item of carouselItems) {
+        item.classList.replace("active",left ? "before-active" : "after-active")
+    }
+    setTimeout(() => {
+        carouselItems[currentItem].classList.replace(left ? "after-active" : "before-active","active")
+    },5)
+    setTimeout(() => {
+        for (item of carouselItems) {
+            item.classList.remove(left ? "before-active" : "after-active")
+        }
+    },500)
+}
