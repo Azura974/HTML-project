@@ -46,7 +46,9 @@ body {
     background-color: var(--fond);
     color: var(--texte);
     margin: 0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-family: 'Kalam', Verdana, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .header{
@@ -177,7 +179,17 @@ body {
     height: 60vw;
     gap: 2%;
     background-color: var(--containers);
+    position: relative;
 }
+
+.fiche a{
+    top:0;
+    left: 0;
+    height: 100%;
+    position: absolute ;
+    width: 100%;
+}
+
 
 #profil-tag1 {
     color: var(--azura);
@@ -209,6 +221,7 @@ body {
 
 
 .pp {
+    position: relative;
     width: 25%;
     display: flex;
     background-color: var(--containers);
@@ -225,12 +238,16 @@ body {
 }
 
 
+
+
 .description {
     padding: 0;
     width: 96%;
     height: 55%;
     background-color: var(--fond);
 }
+
+/* Bouton haut de page */
 
 #bouton{
     background-color: var(--containers);
@@ -244,14 +261,23 @@ body {
     justify-content: center;
     position: sticky;
     bottom: 0;
+    transition: opacity ease-out .5s;
 }
 
 #bouton a{
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--texte);
 }
 
+.inactif{
+    opacity: 0;
+}
+.actif{
+    opacity: 100%;
+}
+
+/* ------- */
 
 .footer {
     margin-top: 30%;

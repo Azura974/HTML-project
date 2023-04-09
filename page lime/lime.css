@@ -17,6 +17,8 @@
 :root {
     --ishrath: #e85151ff;
     --azura: #0dbad4ff;
+    --moon: #bebebe;
+    --sun: #3b3b3b;
 
 }
 
@@ -108,20 +110,36 @@ body {
 }
 
 /*switch things*/
+#thetheme {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 1%;
+    z-index: 99;
+}
+
 .switch {
+    border-radius: 20%/50%;
+    box-shadow: 0px 0px 5px var(--box-shadow);
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 20vw;
+    height: 10vw;
+
 }
 
 .switch input {
+
     opacity: 0;
     width: 0;
     height: 0;
 }
 
 .slider {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    font-size: 8vw;
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -129,12 +147,21 @@ body {
     right: 0;
     bottom: 0;
     background-color: var(--containers);
+    border-radius: inherit;
+    align-items: center;
+    justify-content: center;
+
 }
 
-input:checked+.slider {
-    background-color: var(--containers);
+#moon {
+    color: var(--moon);
 }
 
+#sun {
+    color: var(--sun);
+}
+
+/* ------- */
 .main {
     margin: 2em;
 }
@@ -182,6 +209,8 @@ input:checked+.slider {
     margin-bottom: 30%;
 }
 
+/*Bouton haut de page*/
+
 #bouton{
     background-color: var(--containers);
     width: 15vw;
@@ -194,6 +223,7 @@ input:checked+.slider {
     justify-content: center;
     position: sticky;
     bottom: 0;
+    transition: opacity ease-out .5s;
 }
 
 #bouton a{
@@ -202,6 +232,15 @@ input:checked+.slider {
     color: var(--texte);
 }
 
+.inactif{
+    pointer-events: none;
+    opacity: 0%;
+}
+.actif{
+    opacity: 100%;
+}
+
+/* ------- */
 
 .footer{
     margin-top: 30%;

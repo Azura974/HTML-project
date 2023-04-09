@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lime.css">
-    <script src="things.js" defer defer></script>
+    <script src="../things.js" defer></script>
     <title>Lime</title>
 </head>
 
@@ -19,11 +19,10 @@
         <div class="profil2"> <img src="images/profile.jpg" alt=""></div>
     </div>
 
-    <div id="thebuttons">
-        <!--<button id="themechanger">Change theme</button>-->
+    <div id="thetheme">
         <label class="switch">
             <input type="checkbox" id="themechanger">
-            <span class="slider round"></span>
+            <span class="slider"><span id="sun">🌣</span><span id="moon">☾</span> </span>
         </label>
     </div>
 
@@ -105,7 +104,7 @@
 
     </div>
 
-    <div id="bouton"> <a href="#">⭱</a></div>
+    <div id="bouton" class="inactif"><a href="#">⭱</a></div>
 
     <div class="footer"></div>
 </body>
