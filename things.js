@@ -80,11 +80,11 @@ const bouton = document.getElementById("bouton")
 
 function AfficheBouton() {
     if (carousel) clearInterval(interval)
-    if (scrollY > 5) {
+    if (scrollY > 50) {
         bouton.classList.remove("inactif")
         bouton.classList.add("actif")
     }
-    if (scrollY < 5) {
+    if (scrollY < 50) {
         if (carousel) carouselAutoplay()
         bouton.classList.remove("actif")
         bouton.classList.add("inactif")
