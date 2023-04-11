@@ -51,6 +51,7 @@ body {
     font-weight: 300;
 }
 
+/* HEADER */
 .header {
     /*column-gap: 10%;*/
     display: flex;
@@ -99,7 +100,6 @@ body {
 
 }
 
-
 #sitename {
     width: 50%;
     height: 20vw;
@@ -111,6 +111,7 @@ body {
 }
 
 
+/* LOGO */
 #logo {
     height: 13vw;
     width: 100%;
@@ -125,18 +126,18 @@ body {
     font-family: 'Covered By Your Grace';
     font-size: 2.2rem;
     position: absolute;
+    z-index: 99;
 }
 
 #rec{
     width: 70%;
     height: 50%;
     background-image: linear-gradient(to right, var(--ishrath), var(--azura));
-    z-index: -1;
     position: absolute;
     bottom: 0;
     border-radius: 50%;
 }
-
+/* ------- */
 
 /*switch things*/
 #thetheme {
@@ -290,9 +291,23 @@ body {
 .footer{
     margin-top: 30%;
     width: 100%;
-    height: 50vw;
+    height: auto;
     background-color: var(--containers);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: -1;
+}
 
+.footer ul{
+    list-style-type:none;
+    padding: 0;
+}
+
+.footer ul a{
+    text-decoration: none;
+    color: var(--texte);
 }
 
 @media screen and (min-width: 1024px) {
@@ -390,7 +405,4 @@ body {
         height: 5vw;
     }
 
-    .footer{
-        height: 20vw;
-    }
 }
