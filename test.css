@@ -377,7 +377,7 @@ body {
     }
 
     #sitename{
-        height: 6vw;
+        height: 5vw;
         width: 100%;
     }
 
@@ -398,6 +398,14 @@ body {
     .fiche{
         width: 55%;
         height: 27vw;
+    }
+
+    #profil-tag1{
+        height: 35%;
+    }
+
+    #profil-tag2{
+        height: 35%;
     }
 
     #bouton{

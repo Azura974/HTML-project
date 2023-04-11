@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Kalam:wght@300;400;700&display=swap');
 
 .light-mode {
     --fond: #fcf9f4ff;
@@ -106,7 +106,37 @@ body {
     background-color: var(--containers);
     box-shadow: 0px 0px 5px var(--box-shadow);
     z-index: -1;
+    display: flex;
+    justify-content: center;
 }
+
+
+#logo {
+    height: 13vw;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo p{
+    font-family: 'Covered By Your Grace';
+    font-size: 2.2rem;
+    position: absolute;
+}
+
+#rec{
+    width: 70%;
+    height: 50%;
+    background-image: linear-gradient(to right, var(--ishrath), var(--azura));
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+}
+
 
 /*switch things*/
 #thetheme {
@@ -206,6 +236,7 @@ body {
     background-color: var(--containers);
     text-align: justify;
     justify-content: center;
+    margin-bottom: 30%;
 }
 
 .description p {
@@ -267,7 +298,7 @@ body {
 @media screen and (min-width: 1024px) {
    
     body{
-        margin: 0 6em 0 6em;
+        margin: 0 10em 0 10em;
         font-size: 1.3em;
     }
 
@@ -280,8 +311,16 @@ body {
     }
 
     #sitename{
-        height: 6vw;
+        height: 5vw;
         width: 100%;
+    }
+
+    #logo{
+        height: 4vw;
+    }
+
+    #rec{
+        width: 20%;
     }
 
     .switch{
