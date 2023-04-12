@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+.light-mode {
+    --fond: #fcf9f4ff;
+    --containers: #f5f3eeff;
+    --texte: #1f1f1eff;
+    --box-shadow: rgba(0, 0, 0, .3);
+}
+
+.dark-mode {
+    --fond: #181818ff;
+    --containers: #212121ff;
+    --texte: #f5f5f5ff;
+    --box-shadow: rgba(255, 255, 255, 0.3);
+}
+
+:root {
+    --ishrath: #e85151ff;
+    --azura: #0dbad4ff;
+    --moon: #bebebe;
+    --sun: #3b3b3b;
+    --carousel-height: 20em;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        --fond: #fcf9f4ff;
+        --containers: #f5f3eeff;
+        --texte: #1f1f1eff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --fond: #181818ff;
+        --containers: #212121ff;
+        --texte: #f5f5f5ff;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fond);
+    color: var(--texte);
+    margin: 0;
+    font-family: 'Kalam', Verdana, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.header{
+    /*column-gap: 10%;*/
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    /*background-color: var(--containers);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);*/
+    
+}
+.main{
+    margin: 2em;
+}
+
+
+.profil1{
+    width: 25%;
+    display: flex;
+    background-color: var(--containers);
+    margin: 0;
+    padding: 2%;
+    border-bottom-right-radius: 30%;
+    box-shadow: 0px 0px 5px var(--box-shadow);
+    position: relative;
+}
+
+.profil1 img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profil2 {
+    width: 25%;
+    display: flex;
+    background-color: var(--containers);
+    margin: 0;
+    padding: 2%;
+    border-bottom-left-radius: 30%;
+    box-shadow: 0px 0px 5px var(--box-shadow);
+    position: relative;
+}
+
+.profil2 img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+
+#sitename {
+    width: 50%;
+    height: 20vw;
+    background-color: var(--containers);
+    box-shadow: 0px 0px 5px var(--box-shadow);
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* LOGO */
+#logo {
+    height: 13vw;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo p{
+    font-family: 'Covered By Your Grace';
+    font-size: 2.2rem;
+    position: absolute;
+    z-index: 99;
+}
+
+#rec{
+    width: 70%;
+    height: 50%;
+    background-image: linear-gradient(to right, var(--ishrath), var(--azura));
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+}
+/* ------- */
+
+
+#separator-main {
+    margin-top: 15vw;
+    padding: 0;
+    background-image: linear-gradient(to right, var(--ishrath), var(--azura));
+    height: 1vw;
+    transform: rotateZ(-5deg);
+    width: 100%;
+}
+
+/*switch things*/
+#thetheme {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 1%;
+    z-index: 99;
+}
+
+.switch {
+    border-radius: 20%/50%;
+    box-shadow: 0px 0px 5px var(--box-shadow);
+    position: relative;
+    display: inline-block;
+    width: 20vw;
+    height: 10vw;
+
+}
+
+.switch input {
+
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    font-size: 8vw;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--containers);
+    border-radius: inherit;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* fiches descriptives artistes*/
+.fiche {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+    padding: 0;
+    width: 100%;
+    height: 60vw;
+    gap: 2%;
+    background-color: var(--containers);
+    position: relative;
+}
+
+.fiche a, .profil1 a, .profil2 a{
+    top:0;
+    left: 0;
+    height: 100%;
+    position: absolute ;
+    width: 100%;
+}
+
+
+#profil-tag1 {
+    color: var(--azura);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 15%;
+    margin-top: 2%;
+    padding: 0;
+    width: 96%;
+    height: 38%;
+    background-color: var(--containers);
+}
+
+
+/* différent car contenu justifié à droite*/
+#profil-tag2 {
+    color: var(--ishrath);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: right;
+    gap: 18%;
+    margin-top: 2%;
+    width: 96%;
+    height: 38%;
+    background-color: var(--containers);
+}
+
+
+.pp {
+    position: relative;
+    width: 25%;
+    display: flex;
+    background-color: var(--containers);
+    margin: 0;
+    padding: 2%;
+}
+
+.pp img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 50%;
+   
+}
+
+.description {
+    padding: 0;
+    width: 96%;
+    height: 55%;
+    background-color: var(--fond);
+}
+
+/* Bouton haut de page */
+
+#bouton{
+    background-color: var(--containers);
+    width: 15vw;
+    height: 15vw;
+    border-radius: 30%;
+    float: right;
+    margin: 3%;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    transition: opacity ease-out .5s;
+}
+
+#bouton a{
+    text-decoration: none;
+    font-size: 3rem;
+    color: var(--texte);
+}
+
+.inactif{
+    opacity: 0;
+}
+.actif{
+    opacity: 100%;
+}
+
+
+/*shitpost*/
+#moon {
+    color: var(--moon);
+}
+
+#sun {
+    color: var(--sun);
+}
+
+/* Carousel */
+#carousel {
+    position: relative;
+
+}
+
+#carousel nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--box-shadow) -75%, transparent, var(--box-shadow) 175%);
+    z-index: 10;
+}
+
+#carousel img {
+    width: 100%;
+    height: var(--carousel-height);
+    object-fit: cover;
+}
+
+#carousel ol {
+    padding: 0;
+    height: var(--carousel-height);
+}
+
+#carousel li {
+    display: none;
+    list-style-type: none;
+    transition: transform linear .5s;
+}
+
+#carousel .active {
+    display: block;
+}
+
+#carousel .before-active {
+    display: block;
+    transform: translateX(150%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#carousel .after-active {
+    display: block;
+    transform: translateX(-150%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* footer  */
+.footer{
+    margin-top: 30%;
+    width: 100%;
+    height: auto;
+    background-color: var(--containers);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: -1;
+}
+
+.footer ul{
+    list-style-type:none;
+    padding: 0;
+}
+
+.footer ul a{
+    text-decoration: none;
+    color: var(--texte);
+}
+
+
+/* version pc*/
+@media screen and (min-width: 1024px) {
+    :root{
+        --carousel-height: 60vh;
+    }
+
+    body{
+        margin: 0 15em 0 15em;
+        font-size: 1.3em;
+        box-shadow: 0px 0px 5px var(--box-shadow);
+    }
+
+    .profil1{
+        width: 8%;
+    }
+
+    .profil2{
+        width: 8%;
+    }
+
+    #profil-tag1,#profil-tag2{
+        height: 35%;
+    }
+
+    #sitename{
+        height: 5vw;
+        width: 100%;
+    }
+
+    #logo{
+        height: 4vw;
+    }
+
+    #rec{
+        width: 20%;
+    }
+
+    .switch{
+        height: 4vw;
+        width: 8vw;
+    }
+
+    .slider{
+        gap: 2.5vw;
+        font-size: 2.5vw;
+    }
+
+    .main{
+        margin: 4em;
+    }
+
+    .fiche{
+        width: 55%;
+        height: 27vw;
+    }
+
+    #bouton{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .footer{
+        height: 20vw;
+    }
+}
