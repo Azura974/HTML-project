@@ -410,15 +410,81 @@ body {
 
 
 /* version pc*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px){
+    body{
+        margin: 0 14vw 0 14vw;
+        font-size: 1.3em;
+        box-shadow: 0px 0px 5px var(--box-shadow);
+    }
+
+    .main{
+        margin: 5vw;
+    }
+
+    .profil1, .profil2{
+        width: 15%;
+    }
+
+    #sitename{
+        height: 8vw;
+        width: 100%;
+    }
+
+    #logo{
+        height: 6vw;
+    }
+
+    #rec{
+        width: 30%;
+    }
+
+    .switch{
+        height: 5vw;
+        width: 10vw;
+    }
+
+    .slider{
+        gap: 3vw;
+        font-size: 3vw;
+    }
+
+    .main{
+        margin: 4vw;
+    }
+
+    .fiche{
+        width: 50%;
+        height: 20vw;
+    }
+
+    .gauche{
+        margin-left: 0;
+    }
+    
+    .droite{
+        margin-left: 50%;
+    }
+
+    #profil-tag1,#profil-tag2{
+        height: 35%;
+    }
+
+    #bouton{
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
+
+
+@media screen and (min-width: 1250px) {
     :root{
         --carousel-height: 60vh;
     }
 
     body{
-        margin: 0 15em 0 15em;
+        margin: 0 17vw 0 17vw;
         font-size: 1.3em;
-        box-shadow: 0px 0px 5px var(--box-shadow);
     }
 
     .profil1,.profil2{
@@ -448,33 +514,8 @@ body {
         font-size: 2.5vw;
     }
 
-    .main{
-        margin: 4em;
-    }
-
-    .fiche{
-        width: 55%;
-        height: 20vw;
-    }
-
-    .gauche{
-        margin-left: 0;
-    }
-    
-    .droite{
-        margin-left: 45%;
-    }
-
-    #profil-tag1,#profil-tag2{
-        height: 35%;
-    }
-
     #bouton{
         width: 5vw;
         height: 5vw;
-    }
-
-    .footer{
-        height: 20vw;
     }
 }
