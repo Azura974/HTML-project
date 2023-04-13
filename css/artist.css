@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Kalam:wght@300;400;700&display=swap');
 .light-mode {
     --fond: #fcf9f4ff;
     --containers: #f5f3eeff;
@@ -245,14 +244,12 @@ body {
     background-color: var(--azura);
 }
 
-
-
-
 .description {
     width: 100%;
     background-color: var(--containers);
     text-align: justify;
     justify-content: center;
+    margin-bottom: 30%;
 }
 
 .description p {
@@ -391,7 +388,7 @@ body {
         font-size: 1.5rem;
     }
 
-    .separator{
+    .separator-azu, .separator-lime{
         height: 0.2vw;
     }
 
