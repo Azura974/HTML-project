@@ -296,6 +296,7 @@ body {
     background-color: var(--fond);
     font-size: 1rem;
     font-weight: 300;
+    margin-bottom: 2%;
 }
 
 /* Bouton haut de page */
@@ -442,12 +443,12 @@ body {
     }
 
     #sitename{
-        height: 8vw;
+        height: 10vw;
         width: 100%;
     }
 
     #logo{
-        height: 6vw;
+        height: 8vw;
     }
 
     #rec{
@@ -470,7 +471,7 @@ body {
 
     .fiche{
         width: 50%;
-        height: 22vw;
+        height: 30vw;
     }
 
     .gauche{
@@ -514,12 +515,12 @@ body {
     }
 
     #sitename{
-        height: 4.5vw;
+        height: 6vw;
         width: 100%;
     }
 
     #logo{
-        height: 3.5vw;
+        height: 5vw;
     }
 
     #rec{
@@ -536,8 +537,21 @@ body {
         font-size: 2.5vw;
     }
 
+    .main{
+        margin: 7vw;
+    }
+
     .fiche{
+        width: 40%;
         height: 20vw;
+    }
+
+    .description{
+        font-size: 1.3rem;
+    }
+
+    .droite{
+        margin-left: 60%;
     }
 
     #bouton{
