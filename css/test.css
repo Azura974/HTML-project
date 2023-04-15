@@ -426,6 +426,7 @@ body {
 @media screen and (min-width: 600px){
     #main-content{
         font-size: 1.3em;
+        box-shadow: 0px 0px 5px var(--box-shadow);
     }
     #cache-gauche, #cache-droit{
         width: 14vw;
@@ -499,8 +500,8 @@ body {
     }
 
     #main-content{
-        /*margin: 0 17vw 0 17vw;*/
         font-size: 1.3em;
+        box-shadow: 0px 0px 5px var(--box-shadow);
     }
     #cache-gauche, #cache-droit{
         width: 17vw;

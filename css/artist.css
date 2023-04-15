@@ -100,7 +100,7 @@ body {
 
 }
 
-.profil1 a, .profil2 a{
+.profil1 a, .profil2 a, #sitename a{
     top:0;
     left: 0;
     height: 100%;
@@ -113,6 +113,7 @@ body {
     height: 20vw;
     background-color: var(--containers);
     box-shadow: 0px 0px 5px var(--box-shadow);
+    position: relative;
     z-index: -1;
     display: flex;
     justify-content: center;
@@ -325,8 +326,9 @@ body {
 
 @media screen and (min-width: 600px){
     body{
-        margin: 0 8vw 0 8vw;
+        margin: 0 14vw 0 14vw;
         font-size: 1.3em;
+        box-shadow: 0px 0px 5px var(--box-shadow);
     }
 
     .main{
@@ -414,8 +416,9 @@ body {
 @media screen and (min-width: 1250px) {
    
     body{
-        margin: 0 15vw 0 15vw;
+        margin: 0 16vw 0 16vw;
         font-size: 1.3em;
+        box-shadow: 0px 0px 5px var(--box-shadow);
     }
 
     .profil1{
@@ -461,9 +464,9 @@ body {
         margin-bottom: 0;
     }
 
-    .gallery img:hover{
+    /*.gallery img:hover{
         transform: scale(1.1);
-    }
+    }*/
 
     #bouton{
         width: 5vw;
