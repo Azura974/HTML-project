@@ -57,6 +57,10 @@ body {
     background-color: var(--fond);
 }
 
+#cache-droit{
+    align-self: flex-end;
+}
+
 .header{
     /*column-gap: 10%;*/
     display: flex;
@@ -224,7 +228,7 @@ body {
 }
 
 
-.fiche a, .profil1 a, .profil2 a,#sitename a{
+.fiche a, .profil1 a, .profil2 a, #sitename a{
     top:0;
     left: 0;
     height: 100%;
