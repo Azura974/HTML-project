@@ -59,6 +59,7 @@ body {
 
 #cache-droit{
     align-self: flex-end;
+    
 }
 
 .header{
@@ -228,15 +229,21 @@ body {
 }
 
 
-.fiche a, .profil1 a, .profil2 a, #sitename a{
+.fiche a, .profil1 a, .profil2 a{
     top:0;
     left: 0;
     height: 100%;
     position: absolute ;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
 }
-
+ #logo a{
+    top:0;
+    left: 0;
+    height: 100%;
+    position: absolute ;
+    width: 100%;
+ }
 
 #profil-tag1 {
     color: var(--azura);
@@ -385,7 +392,7 @@ body {
 
 #carousel .before-active {
     display: block;
-    transform: translateX(150%);
+    transform: translateX(100%);
     position: absolute;
     top: 0;
     left: 0;
@@ -396,7 +403,7 @@ body {
 
 #carousel .after-active {
     display: block;
-    transform: translateX(-150%);
+    transform: translateX(-100%);
     position: absolute;
     top: 0;
     left: 0;
@@ -503,7 +510,7 @@ body {
 
 @media screen and (min-width: 1250px) {
     :root{
-        --carousel-height: 60vh;
+        --carousel-height: 35em;
     }
 
     #main-content{
